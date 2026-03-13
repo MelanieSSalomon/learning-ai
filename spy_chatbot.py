@@ -2,9 +2,16 @@
 # Practice project for learning lpoops, functions, and user input
 # Buikt during AI software engineering coursework
 
-
+import sys
 import random
 import time
+
+def type_text(text):
+    for letter in text:
+        sys.stdout.write(letter)
+        sys.stdout.flush()
+        time.sleep(0.02)
+print()        
 
 def random_spy_name():
     spy_names = ["Agent Phoenix", "Agent Shadow", "Agent Cobra", "Agent Thunder", "Agent Eclipse"]
@@ -48,7 +55,7 @@ while True:
         break
 
     bot_reply = get_kevin_hart_phrases() + " " + user_input
-    print("Bot:", bot_reply)
+    type_text("Bot: " + bot_reply)
 
 
     
